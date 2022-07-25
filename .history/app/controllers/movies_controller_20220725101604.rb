@@ -15,9 +15,9 @@ class MoviesController < ApplicationController
     render json: movie, serializer: MovieSerializer
   end
   def summaries
-    movies = Movie.all
-    render json: movies, each_serializer: MovieSerializer
-  end
+  movies = Movie.all
+  render json: movies, each_serializer: MovieSummarySerializer
+end
 
   private
 
